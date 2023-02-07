@@ -7,7 +7,9 @@ const Layout: FC<PropsWithChildren> = (props) => {
   return (
   <div className={classes.container}>
     <Navbar isAut={false}/>
-    {props.children}
+    <div className={classes.main}>
+      {props.children}
+    </div>
     <Footer/>
   </div>
   )

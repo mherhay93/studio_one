@@ -1,2 +1,8 @@
 .container {
+    position: relative;
+}
+
+.main {
+    height: 78.6vh;
+    overflow: auto;
 }
