@@ -20,8 +20,8 @@ const routs = (isAut: boolean) => {
   } else {
     return (
     <Routes>
-      <Route path={'/login'} element={<Login/>}/>
       <Route path={'/'} element={<RootHome/>}/>
+      <Route path={'/login'} element={<Login/>}/>
       <Route path={'/news'} element={<RootNews/>}/>
       <Route path={'*'} element={<NotFound/>}/>
     </Routes>

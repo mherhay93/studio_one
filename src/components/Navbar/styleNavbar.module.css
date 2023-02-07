@@ -1,0 +1,34 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 40px;
+    background-color: antiquewhite
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.linkContainer {
+    gap: 20vw;
+}
+
+.linkIcons {
+    gap: 10px;
+}
+
+.logo {
+    width: 5vw;
+}
+
+.styleLink {
+    color: #F3752B;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.iconProfile {
+    color: #F3752B;
+}

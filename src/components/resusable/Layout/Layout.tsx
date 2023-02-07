@@ -1,19 +1,12 @@
-import classes from './styleLayout.module.css'
 import Navbar from "../../Navbar/Navbar";
 import Footer from "../../Footer/Footer";
-import {ReactNode} from "react";
+import { FC, PropsWithChildren } from "react";
 
-interface ILayout {
-  children: ReactNode | ReactNode[]
-}
-
-
-const Layout = ({children}: ILayout) => {
-
+const Layout: FC<PropsWithChildren> = (props) => {
   return (
   <>
-    <Navbar/>
-    {children}
+    <Navbar isAut={false}/>
+    {props.children}
     <Footer/>
   </>
   )
