@@ -21,3 +21,5 @@ export const loginPaths: IPages[] = [
     path: '/login'
   }
 ]
+
+export const textHome = 'Hello! do you want to know news'

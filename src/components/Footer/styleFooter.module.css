@@ -1,0 +1,18 @@
+.container {
+    background-color: #133813;
+    height: 11vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 20px;
+    gap: 20px;
+}
+
+.link {
+    text-decoration: none;
+    color: #F3752B;
+}
+
+.logo {
+    width: 40px;
+}
