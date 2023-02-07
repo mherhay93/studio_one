@@ -8,7 +8,7 @@ const Footer = () => {
   <div className={classes.container}>
     <img className={classes.logo} src={images.newsLogo} alt={'Logo'}/>
     {pages.map(item => (
-    <Link className = {classes.link} to={item.path}>
+    <Link key={item.path} className = {classes.link} to={item.path}>
       {item.name}
     </Link>
     ))}
