@@ -1,9 +1,9 @@
-import Home from "../components/Home/Home";
+import routs from "./routs";
 
 const RouterPages = () => {
- return(
- <Home/>
- )
+  return (
+  routs(false)
+  )
 }
 
 export default RouterPages

@@ -1,10 +1,21 @@
 import classes from './styleLayout.module.css'
-const Layout = () => {
+import Navbar from "../../Navbar/Navbar";
+import Footer from "../../Footer/Footer";
+import {ReactNode} from "react";
+
+interface ILayout {
+  children: ReactNode | ReactNode[]
+}
+
+
+const Layout = ({children}: ILayout) => {
 
   return (
-  <div>
-
-  </div>
+  <>
+    <Navbar/>
+    {children}
+    <Footer/>
+  </>
   )
 }
 
