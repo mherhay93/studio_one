@@ -5,8 +5,9 @@ export interface IPages {
 
 export interface IState {
   news: INews[],
+  filterData: INews[],
   user: IUser,
-  isAut:boolean
+  isAut: boolean
 }
 
 export interface IUser {
@@ -27,16 +28,15 @@ export interface INews {
   image: string,
   comments: string[],
   id: string,
-  fibNum?:number
+  fibNum?: number,
+  prim?: string
 }
 
 export interface IReduce {
-  news: IState,
-  user: IUser,
-  isAut:boolean
+  news: IState
 }
 
 export enum StatusFetch {
-  'SUCCESS'='SUCCESS',
-  'ERROR'='ERROR'
+  'SUCCESS' = 'SUCCESS',
+  'ERROR' = 'ERROR'
 }

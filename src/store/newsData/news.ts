@@ -3,6 +3,7 @@ import {IState} from "../../types";
 
 const initialState: IState = {
   news: [],
+  filterData:[],
   user: {
     name: '',
     password: '',
@@ -29,6 +30,11 @@ export const news = createSlice({
     setIsAut: (state, action) => {
       localStorage.isAut = JSON.stringify(action.payload)
       return {...state, isAut: action.payload}
+    },
+    search: (state, action) => {
+      const searchObj = action.payload
+      let data = state.news.filter(item => item?.title === searchObj.searchText || item?.prim === searchObj.picked)
+      return {...state, filterData:data}
     }
 
   }
@@ -37,5 +43,6 @@ export const news = createSlice({
 export const {
   getDataNews,
   getUsers,
-  setIsAut
+  setIsAut,
+search
 } = news.actions

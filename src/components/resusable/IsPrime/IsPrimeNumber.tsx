@@ -4,7 +4,7 @@ import classes from './styleIsPrime.module.css'
 interface IIsPrime {
   num:number
 }
-const IsPrime = ({num}:IIsPrime) => {
+const IsPrimeNumber = ({num}:IIsPrime) => {
   if (num <= 1) {
     return (
     <div className={classes.numbers}>
@@ -28,4 +28,4 @@ const IsPrime = ({num}:IIsPrime) => {
   );
 }
 
-export default IsPrime
+export default IsPrimeNumber

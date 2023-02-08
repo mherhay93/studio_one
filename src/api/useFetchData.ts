@@ -1,6 +1,7 @@
 import {useDispatch} from "react-redux";
 import {getDataNews} from "../store/newsData/news";
 import {INews} from "../types";
+import isPrime from "./isPrime";
 
 export const useFetchData = () => {
   const dispatch = useDispatch()
@@ -9,6 +10,7 @@ export const useFetchData = () => {
     let start = 0;
     let end = 1;
     let fibNum = 1
+    let prim
     fetch('https://63e2578b3e12b193763da686.mockapi.io/news')
     .then((response) => response.json())
     .then((data) => {
@@ -18,7 +20,9 @@ export const useFetchData = () => {
           end = fibNum;
           fibNum = start + end;
         }
-        return {...item, fibNum}
+
+        prim = isPrime(fibNum)
+        return {...item, fibNum, prim}
       })
 
       dispatch(getDataNews(dataNews))
