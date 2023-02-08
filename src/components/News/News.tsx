@@ -9,7 +9,6 @@ const News = () => {
 
   const dataNews = useSelector(getData)
   const {fetchData} = useFetchData()
-  console.log(dataNews)
 
   useEffect(() => {
     fetchData()

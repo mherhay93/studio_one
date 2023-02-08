@@ -4,17 +4,36 @@ export interface IPages {
 }
 
 export interface IState {
-  news:INews[]
+  news: INews[],
+  user: IUser
+}
+
+export interface IUser {
+
+  name: string,
+  password: string,
+  username: string,
+  knownIps: string[],
+  follows: string[],
+  id: string,
+
+
 }
 
 export interface INews {
   title: string,
   description: string,
   image: string,
-  comments: string,
+  comments: string[],
   id: string
 }
 
 export interface IReduce {
-  news:IState
+  news: IState,
+  user: IUser
+}
+
+export enum StatusFetch {
+  'SUCCESS'='SUCCESS',
+  'ERROR'='ERROR'
 }
