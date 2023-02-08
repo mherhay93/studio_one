@@ -1,0 +1,14 @@
+.container {
+    width: 60px;
+    background-color: #c6d0c6;
+    border-right: #F3752B;
+    border-right-width: 1px;
+    border-right-style: solid;
+    height: 78.6vh;
+    position: absolute;
+    transition: width .4s;
+}
+
+.container:hover {
+    width: 220px;
+}

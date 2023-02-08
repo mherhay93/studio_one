@@ -1,9 +1,10 @@
 import Layout from "../resusable/Layout/Layout";
 import Profile from "./Profile";
+import LeftMenu from "../resusable/LeftMenu/LeftMenu";
 
 const RootProfile = () => {
   return (
-  <Layout children={<Profile/>}/>
+  <Layout leftMenu={<LeftMenu/>} children={<Profile/>}/>
   )
 }
 

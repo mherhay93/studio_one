@@ -9,7 +9,8 @@ const News = () => {
 
   const dataNews = useSelector(getData)
   const {fetchData} = useFetchData()
-
+  const isAutInLocalStorage = localStorage.isAut && JSON.parse(localStorage.isAut)
+  
   useEffect(() => {
     fetchData()
   }, [])
@@ -18,7 +19,15 @@ const News = () => {
 
   return (
   <div className={classes.container}>
-    {paintData.map(item => <CardNews key={item.id} title={item.title} description={item.description} image={item.image} comments={item.comments} id={item.id}/>)}
+    {paintData.map(item =>(
+    <CardNews
+    isAut={isAutInLocalStorage}
+    key={item.id} title={item.title}
+    description={item.description}
+    image={item.image}
+    comments={item.comments}
+    id={item.id}/>
+    ))}
   </div>
   )
 }
