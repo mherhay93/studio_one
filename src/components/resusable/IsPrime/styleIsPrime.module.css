@@ -1,0 +1,14 @@
+.numbers {
+    border-radius: 8px;
+    padding: 2px 4px;
+    background-color: red;
+    height: fit-content;
+}
+
+.numbersType {
+    color: white;
+}
+
+.prime {
+    background-color: green;
+}

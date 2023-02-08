@@ -26,7 +26,8 @@ export interface INews {
   description: string,
   image: string,
   comments: string[],
-  id: string
+  id: string,
+  fibNum?:number
 }
 
 export interface IReduce {

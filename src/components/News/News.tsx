@@ -10,7 +10,7 @@ const News = () => {
   const dataNews = useSelector(getData)
   const {fetchData} = useFetchData()
   const isAutInLocalStorage = localStorage.isAut && JSON.parse(localStorage.isAut)
-  
+  console.log(dataNews)
   useEffect(() => {
     fetchData()
   }, [])
@@ -26,7 +26,8 @@ const News = () => {
     description={item.description}
     image={item.image}
     comments={item.comments}
-    id={item.id}/>
+    id={item.id}
+    fibNum={item.fibNum}/>
     ))}
   </div>
   )
