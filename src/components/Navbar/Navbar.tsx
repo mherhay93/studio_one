@@ -6,12 +6,16 @@ import cn from 'classnames'
 import {images} from "../../assets/images/images";
 import {loginPaths, pages} from "../../constants";
 import classes from './styleNavbar.module.css'
+import {useDispatch} from "react-redux";
+import {setIsAut} from "../../store/newsData/news";
 
 interface INavbar {
   isAut: boolean
 }
 
 const Navbar = ({isAut}: INavbar) => {
+
+  const dispatch = useDispatch()
 
   const activeStyle = {
     color: 'green',
@@ -20,6 +24,11 @@ const Navbar = ({isAut}: INavbar) => {
 
   const activeIcons = {
     color: 'green'
+  }
+
+  const handleExit = () => {
+    dispatch(setIsAut(false))
+    window.localStorage.clear()
   }
 
   return (
@@ -54,7 +63,9 @@ const Navbar = ({isAut}: INavbar) => {
         style={({isActive}) =>
         isActive ? activeIcons : undefined
         }
-        to={pages[0].path}>
+        to={pages[0].path}
+        onClick={handleExit}
+        >
           <BiExit size={'2vw'} className={classes.iconProfile}/>
         </NavLink>
       </div>

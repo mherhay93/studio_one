@@ -1,9 +1,22 @@
 import classes from './styleProfile.module.css'
+import {useSelector} from "react-redux";
+import {getUser} from "../../store/newsData/selectors";
+import {useEffect} from "react";
 
 const Profile = () => {
+  const userStore = useSelector(getUser)
+  const userInLocal = localStorage.user && JSON.parse(localStorage.user)
+
+  const user = userInLocal || userStore
+
+  useEffect(() => {
+    // fetchUsers()
+  }, [])
+
   return (
-  <div>
-    Profile
+  <div className={classes.container}>
+    <span className={classes.sub}>name:</span>
+    <h1 className={classes.name}>{user.username}</h1>
   </div>
   )
 }

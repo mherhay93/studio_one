@@ -5,7 +5,8 @@ export interface IPages {
 
 export interface IState {
   news: INews[],
-  user: IUser
+  user: IUser,
+  isAut:boolean
 }
 
 export interface IUser {
@@ -30,7 +31,8 @@ export interface INews {
 
 export interface IReduce {
   news: IState,
-  user: IUser
+  user: IUser,
+  isAut:boolean
 }
 
 export enum StatusFetch {

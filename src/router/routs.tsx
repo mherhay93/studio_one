@@ -2,18 +2,17 @@ import {Route, Routes} from "react-router";
 import RootHome from "../components/Home/RootHome";
 import RootNews from "../components/News/RootNews";
 import NotFound from "../components/NotFound/NotFound";
-import Profile from "../components/Profile/Profile";
 import Login from "../components/Login/Login";
+import RootProfile from "../components/Profile/RootProfile";
 
 
 const routs = (isAut: boolean) => {
-
   if (isAut) {
     return (
     <Routes>
       <Route path={'/'} element={<RootHome/>}/>
       <Route path={'/news'} element={<RootNews/>}/>
-      <Route path={'/profile'} element={<Profile/>}/>
+      <Route path={'/profile'} element={<RootProfile/>}/>
       <Route path={'*'} element={<NotFound/>}/>
     </Routes>
     )

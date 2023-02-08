@@ -1,0 +1,16 @@
+.container {
+    padding: 20px 80px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.sub {
+    font-size: 14px;
+    color: #133813;
+}
+
+.name {
+    color: #F3752B;
+    text-transform: uppercase;
+}

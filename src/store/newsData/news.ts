@@ -10,7 +10,8 @@ const initialState: IState = {
     id: '',
     follows: [],
     knownIps: [],
-  }
+  },
+  isAut: false
 }
 
 export const news = createSlice({
@@ -18,10 +19,16 @@ export const news = createSlice({
   initialState,
   reducers: {
     getDataNews: (state, action) => {
-      state.news = action.payload
+      return {...state, news: action.payload}
     },
     getUsers: (state, action) => {
-      state.user = action.payload
+      localStorage.user = JSON.stringify(action.payload)
+      return {...state, user: action.payload}
+
+    },
+    setIsAut: (state, action) => {
+      localStorage.isAut = JSON.stringify(action.payload)
+      return {...state, isAut: action.payload}
     }
 
   }
@@ -29,5 +36,6 @@ export const news = createSlice({
 
 export const {
   getDataNews,
-  getUsers
+  getUsers,
+  setIsAut
 } = news.actions
