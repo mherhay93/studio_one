@@ -1,0 +1,19 @@
+.title {
+    font-size: 28px;
+    color: #F3752B;
+    font-weight: 600;
+    margin-bottom: 20%;
+}
+
+.btn {
+    width: fit-content;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.cancelButton {
+    background-color: unset;
+    border: 1px solid #F3752B;
+    color: #F3752B;
+    margin-left: 20px;
+}

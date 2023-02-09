@@ -1,0 +1,37 @@
+.container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: none;
+    backdrop-filter: blur(20px);
+    background-color: rgba(19, 56, 19, 30%);
+    z-index: 10;
+}
+
+.modalBody {
+    width: 600px;
+    height: 300px;
+    background-color: #c6d0c6;
+    border-radius: 12px;
+    border: 1px solid #F3752B;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.iconClose {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.display {
+    display: block;
+}
