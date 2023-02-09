@@ -1,5 +1,7 @@
 import {IPages} from "../types";
 
+export const api = 'https://63e52ef78e1ed4ccf6efa8d2.mockapi.io'
+
 export const pages: IPages[] = [
   {
     name: 'Home',

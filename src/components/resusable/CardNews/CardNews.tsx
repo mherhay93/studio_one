@@ -9,7 +9,7 @@ interface ICardNews extends INews {
   handleOpenModal: (id: string) => void,
 }
 
-const CardNews = ({title, description, comments, image, isAut, fibNum, id, handleOpenModal}: ICardNews) => {
+const CardNews = ({title, description, image, isAut, fibNum, id, handleOpenModal}: ICardNews) => {
 
   return (
   <div className={classes.container}>

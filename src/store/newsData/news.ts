@@ -7,10 +7,8 @@ const initialState: IState = {
   user: {
     name: '',
     password: '',
-    username: '',
     id: '',
     follows: [],
-    knownIps: [],
   },
   isAut: false
 }

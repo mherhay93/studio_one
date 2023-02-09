@@ -30,6 +30,8 @@
 
 .description {
     color: #133813;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .iconClose {

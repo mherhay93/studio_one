@@ -1,12 +1,13 @@
 import {useState} from "react";
 import {StatusFetch} from "../types";
 import {useFetchData} from "./useFetchData";
+import {api} from "../constants";
 
 export const useFetchDelete = () => {
   const [status, setStatus] = useState('')
   const {fetchData} = useFetchData()
   const fetchDelete = (id: string) => {
-    fetch(`https://63e2578b3e12b193763da686.mockapi.io/news/${id}`, {
+    fetch(`${api}/news/${id}`, {
       method: 'DELETE'
     })
     .then((response) => response.json())

@@ -7,8 +7,8 @@ import {getData, getFilterData} from "../../store/newsData/selectors";
 import Modal from "../resusable/Modal/Modal";
 import ConfirmModal from "../resusable/ConfirmModal/ConfirmModal";
 import {useFetchDelete} from "../../api/useFetchDelete";
-import classes from './styleNews.module.css'
 import AddNews from "../resusable/AddNews/AddNews";
+import classes from './styleNews.module.css'
 
 const News = () => {
 
@@ -62,7 +62,6 @@ const News = () => {
     key={item.id} title={item.title}
     description={item.description}
     image={item.image}
-    comments={item.comments}
     id={item.id}
     fibNum={item.fibNum}
     handleOpenModal={handleOpenModal}
