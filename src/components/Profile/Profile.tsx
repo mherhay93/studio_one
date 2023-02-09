@@ -9,14 +9,10 @@ const Profile = () => {
 
   const user = userInLocal || userStore
 
-  useEffect(() => {
-    // fetchUsers()
-  }, [])
-
   return (
   <div className={classes.container}>
     <span className={classes.sub}>name:</span>
-    <h1 className={classes.name}>{user.username}</h1>
+    <h1 className={classes.name}>{user.name}</h1>
   </div>
   )
 }
