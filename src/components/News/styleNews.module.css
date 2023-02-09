@@ -3,3 +3,21 @@
     flex-wrap: wrap;
     padding: 10px 100px 0;
 }
+
+.addNews {
+    width: 80px;
+    height: 80px;
+    border: 1px solid #F3752B;
+    border-radius: 50%;
+    position: absolute;
+    right: 4%;
+    top: 12%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.addIcon path {
+    stroke: #F3752B !important;
+}
