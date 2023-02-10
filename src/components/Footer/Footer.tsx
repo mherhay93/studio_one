@@ -1,7 +1,7 @@
-import classes from './styleFooter.module.css'
+import {Link} from "react-router-dom";
 import {images} from "../../assets/images/images";
 import {pages} from "../../constants";
-import {Link} from "react-router-dom";
+import classes from './styleFooter.module.css'
 
 const Footer = () => {
   return (

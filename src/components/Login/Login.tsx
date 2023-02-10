@@ -27,11 +27,12 @@ const Login = () => {
           </div>
           <div className={classes.input}>
             <label className={classes.label} htmlFor="password">Password</label>
-            <Field id="password" name="password" placeholder="Password"/>
+            <Field type="password" id="password" name="password" placeholder="Password"/>
           </div>
           <div className={classes.input}>
             <button className={classes.button} type="submit">Login</button>
-            {status === StatusFetch.ERROR && <span className={classes.error}>The username or password you entered is incorrect</span>}
+            {status === StatusFetch.ERROR &&
+            <span className={classes.error}>The username or password you entered is incorrect</span>}
           </div>
         </Form>
       </Formik>

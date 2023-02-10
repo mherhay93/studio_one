@@ -1,7 +1,6 @@
-import classes from './styleProfile.module.css'
 import {useSelector} from "react-redux";
 import {getUser} from "../../store/newsData/selectors";
-import {useEffect} from "react";
+import classes from './styleProfile.module.css'
 
 const Profile = () => {
   const userStore = useSelector(getUser)

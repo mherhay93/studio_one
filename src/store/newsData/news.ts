@@ -3,7 +3,7 @@ import {IState} from "../../types";
 
 const initialState: IState = {
   news: [],
-  filterData:[],
+  filterData: [],
   user: {
     name: '',
     password: '',
@@ -32,7 +32,7 @@ export const news = createSlice({
     search: (state, action) => {
       const searchObj = action.payload
       let data = state.news.filter(item => item?.title === searchObj.searchText || item?.prim === searchObj.picked)
-      return {...state, filterData:data}
+      return {...state, filterData: data}
     }
 
   }
@@ -42,5 +42,5 @@ export const {
   getDataNews,
   getUsers,
   setIsAut,
-search
+  search
 } = news.actions

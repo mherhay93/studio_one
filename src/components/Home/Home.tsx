@@ -1,6 +1,6 @@
-import classes from './styleHome.module.css'
-import {pages, textHome} from "../../constants";
 import {Link} from "react-router-dom";
+import {pages, textHome} from "../../constants";
+import classes from './styleHome.module.css'
 
 const Home = () => {
 

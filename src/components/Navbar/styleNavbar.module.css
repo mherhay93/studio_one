@@ -32,3 +32,7 @@
 .iconProfile {
     color: #F3752B;
 }
+
+.iconProfileActive {
+    color: green;
+}

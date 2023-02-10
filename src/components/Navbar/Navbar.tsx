@@ -1,20 +1,23 @@
-import {Link, NavLink} from "react-router-dom";
+import {useEffect, useState} from "react";
+import {useDispatch} from "react-redux";
+import {Link, NavLink, useLocation} from "react-router-dom";
 import {CgProfile} from 'react-icons/cg'
-import {BiLogIn, BiExit} from 'react-icons/bi'
 import cn from 'classnames'
-
+import {BiLogIn, BiExit} from 'react-icons/bi'
 import {images} from "../../assets/images/images";
 import {loginPaths, pages} from "../../constants";
-import classes from './styleNavbar.module.css'
-import {useDispatch} from "react-redux";
 import {setIsAut} from "../../store/newsData/news";
+import classes from './styleNavbar.module.css'
+
 
 interface INavbar {
   isAut: boolean
 }
 
 const Navbar = ({isAut}: INavbar) => {
+  const [isActive, setIsActive] = useState(false)
 
+  const loc = useLocation()
   const dispatch = useDispatch()
 
   const activeStyle = {
@@ -30,6 +33,14 @@ const Navbar = ({isAut}: INavbar) => {
     dispatch(setIsAut(false))
     localStorage.isAut = false
   }
+
+  useEffect(() => {
+    if(loc.pathname === loginPaths[0].path) {
+      setIsActive(true)
+    } else {
+      setIsActive(false)
+    }
+  }, [])
 
   return (
   <nav className={classes.container}>
@@ -57,12 +68,9 @@ const Navbar = ({isAut}: INavbar) => {
         isActive ? activeIcons : undefined
         }
         to={loginPaths[0].path}>
-          <CgProfile size={'2vw'} className={classes.iconProfile}/>
+          <CgProfile size={'2vw'} className={cn(classes.iconProfile, {[classes.iconProfileActive]: isActive})}/>
         </NavLink>
         <NavLink
-        style={({isActive}) =>
-        isActive ? activeIcons : undefined
-        }
         to={pages[0].path}
         onClick={handleExit}
         >

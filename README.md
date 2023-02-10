@@ -4,12 +4,24 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
+should be done right from the start
+
+### `yarn install`
+
 In the project directory, you can run:
 
-### `npm start`
+### `yarn dev`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+use for login  --->  name admin, password 12345
+
+used for request mockApi url https://63e52ef78e1ed4ccf6efa8d2.mockapi.io/
+news https://63e52ef78e1ed4ccf6efa8d2.mockapi.io/news
+users https://63e52ef78e1ed4ccf6efa8d2.mockapi.io/login
+
+--------------------------------------------------------------------------------------------------------------------------------
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
