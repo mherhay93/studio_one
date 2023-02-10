@@ -18,7 +18,6 @@ export const useFetchUsers = () => {
     fetch(`${api}/login`)
     .then((response) => response.json())
     .then((data: IUser[]) => {
-      console.log(data, 'login')
       const user = data.filter(item => item.name === name && item.password === password)
 
       if (!user.length) {

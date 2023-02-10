@@ -30,19 +30,6 @@
     height: 80px;
 }
 
-input[type="file"] {
-    display: none;
-}
-
-.uploadImage {
-    background-color: #F3752B;
-    width: 80px;
-    padding: 6px;
-    border-radius: 12px;
-    color: #c6d0c6;
-    cursor: pointer;
-}
-
 .button {
     padding: 8px 0;
     cursor: pointer;

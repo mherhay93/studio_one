@@ -28,7 +28,7 @@ const Navbar = ({isAut}: INavbar) => {
 
   const handleExit = () => {
     dispatch(setIsAut(false))
-    window.localStorage.clear()
+    localStorage.isAut = false
   }
 
   return (
